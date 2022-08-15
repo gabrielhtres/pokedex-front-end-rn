@@ -1,7 +1,7 @@
 import { Styles } from "./Styles";
 import React, { useState, setState } from 'react';
 import { View, Text, Image, ScrollView, TextInput, Button } from 'react-native';
-import { useNavigation, Link } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 
 const PokemonProfile = (props) => {
     const [pokemon, setPokemon] = useState(["Bulbassauro", "Charmander"]);
@@ -37,11 +37,8 @@ const PokemonProfile = (props) => {
                     }}>
                         <Text>#001</Text>
                         <Text>Bulbassauro</Text>
-                        {/* <Badge>
-                            Grass
-                        </Badge> */}
-                        <Text>Grass</Text>
-                        <Text>Poison</Text>
+                        <Image source={require('./assets/badges/Grass.png')} style={{ width: 50, height: 20, borderRadius: 5, marginRight: 2, marginBottom: 2 }}/>
+                        <Image source={require('./assets/badges/Poison.png')} style={{ width: 50, height: 20, borderRadius: 5 }}/>
                     </View>
                 </View>
                 <View style={{ // Parte dos botões
