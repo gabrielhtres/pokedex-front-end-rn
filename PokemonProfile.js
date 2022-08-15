@@ -35,8 +35,8 @@ const PokemonProfile = (props) => {
                     <View style={{
                         marginLeft: "5%"
                     }}>
-                        <Text>#001</Text>
-                        <Text>Bulbassauro</Text>
+                        <Text style={{ fontSize: 13, color: "dark" }}>#001</Text>
+                        <Text style={{ fontSize: 18, color: "gray", marginBottom: 2 }}>Bulbassauro</Text>
                         <Image source={require('./assets/badges/Grass.png')} style={{ width: 50, height: 20, borderRadius: 5, marginRight: 2, marginBottom: 2 }}/>
                         <Image source={require('./assets/badges/Poison.png')} style={{ width: 50, height: 20, borderRadius: 5 }}/>
                     </View>
