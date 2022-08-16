@@ -6,5 +6,19 @@ export const Styles = StyleSheet.create({
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
+      color: 'black'
     },
+    ViewDadosPokedex: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginBottom: 15
+    },
+    TituloDadosPokemon: {
+      color: 'black',
+      fontWeight: 'bold'
+    },
+    TextoPreto: {
+      color: 'black'
+    }
 });

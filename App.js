@@ -1,8 +1,7 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native';
 import { Styles } from './Styles';
-import PokemonProfile from './PokemonProfile';
-import Home from './Home';
+import PokemonProfile from './src/pages/PokemonProfile';
+import Home from './src/pages/Home';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
