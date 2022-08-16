@@ -13,7 +13,7 @@ const InfoTopoPokemon = () => {
         }}>
             <Image
                     source={{ uri: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" /*require('./assets/bulbasaur.png')*/ }}
-                    style={{ width: 100, height: 100, flexShrink: 40, paddingRight: "5%" }}
+                    style={{ width: 150, height: 150, flexShrink: 40, paddingRight: "5%" }}
                 />
             <View style={{
                 marginLeft: "5%",

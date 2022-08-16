@@ -17,7 +17,7 @@ const PokemonProfile = (props) => {
     return(
         <View style={{
             height: '100%',
-            backgroundColor: '#009900'
+            backgroundColor: '#8bbe8a'
         }}>
             <View style={{ // Parte de cima da tela
                 height: "40%",
@@ -29,7 +29,7 @@ const PokemonProfile = (props) => {
                     marginTop: "auto",
                     marginBottom: "5%"
                 }}>
-                    <Text style={{ color: "white" }}>Sobre</Text>
+                    <Text style={{ color: "white", fontWeight: 'bold' }}>Sobre</Text>
                     <Text style={{ color: "#cccccc" }}>Status</Text>
                     <Text style={{ color: "#cccccc" }}>Evolução</Text>
                 </View>
