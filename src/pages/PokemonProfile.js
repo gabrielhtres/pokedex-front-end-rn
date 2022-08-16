@@ -17,11 +17,10 @@ const PokemonProfile = (props) => {
     return(
         <View style={{
             height: '100%',
-            backgroundColor: '#cef79f'
+            backgroundColor: '#009900'
         }}>
             <View style={{ // Parte de cima da tela
                 height: "40%",
-                backgroundColor: '#cef79f'
             }}>
                 <InfoTopoPokemon />
                 <View style={{ // Parte dos botões
@@ -31,8 +30,8 @@ const PokemonProfile = (props) => {
                     marginBottom: "5%"
                 }}>
                     <Text style={{ color: "white" }}>Sobre</Text>
-                    <Text style={{ color: "white" }}>Status</Text>
-                    <Text style={{ color: "white" }}>Evolução</Text>
+                    <Text style={{ color: "#cccccc" }}>Status</Text>
+                    <Text style={{ color: "#cccccc" }}>Evolução</Text>
                 </View>
             </View>
 
