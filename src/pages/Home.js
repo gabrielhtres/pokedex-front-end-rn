@@ -3,6 +3,7 @@ import { ScrollView, Text, View, Image, TextInput, FlatList } from 'react-native
 import { Styles } from "../../Styles";
 import { Link } from '@react-navigation/native';
 import Input from '../components/Input';
+import ListaPokemon from '../components/ListaPokemon';
 
 const Home = () => {
     return (
@@ -16,11 +17,10 @@ const Home = () => {
               <Image source={ require('../../assets/FilterIcon.png') } style={{ width: 30, height: 27 }} />
             </View>
           </View>
-          <View style={{ }}>
-            <Text style={{ ...Styles.TextoPadrao, fontSize: 30, fontWeight: 'bold', marginTop: '10%' }}>Geração I</Text>
-            <Text style={{ ...Styles.TextoPadrao, marginTop: '5%'}}>Pesquise o Pokémon pelo seu nome...</Text>
-            <Input />
-          </View>
+          <Text style={{ ...Styles.TextoPadrao, fontSize: 30, fontWeight: 'bold', marginTop: '10%' }}>Geração I</Text>
+          <Text style={{ ...Styles.TextoPadrao, marginTop: '5%'}}>Pesquise o Pokémon pelo seu nome...</Text>
+          <Input />
+          <ListaPokemon />
         </ScrollView>
       );
 }
