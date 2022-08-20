@@ -2,7 +2,7 @@
 import React, { useState, setState } from 'react';
 import { View, Text, Image, ScrollView, TextInput, Button } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
-import DadosPokedex from './components/DadosPokedex'
+import DadosPokedex from '../components/DadosPokedex'
 import InfoTopoPokemon from '../components/InfoTopoPokemon';
 
 const PokemonProfile = (props) => {
