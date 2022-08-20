@@ -7,7 +7,7 @@ import InfoTopoPokemon from '../components/InfoTopoPokemon';
 
 const PokemonProfile = (props) => {
     const [pokemon, setPokemon] = useState(["Bulbassauro", "Charmander"]);
-    console.log(pokemon)
+    console.log(pokemon)    
 
     function mudarPokemons() {
         const navigation = useNavigation();

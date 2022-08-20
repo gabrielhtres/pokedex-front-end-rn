@@ -20,5 +20,25 @@ export const Styles = StyleSheet.create({
     },
     TextoPreto: {
       color: 'black'
+    },
+    TopoHome: {
+      width: '100%',
+    },
+    Borda: {
+      borderColor: 'red',
+      borderWidth: 2,
+      borderStyle: 'solid'
+    },
+    TextoPadrao: {
+      color: 'black',
+      textAlign: 'center'
+    },
+    InputHome: {
+      height: '30%',
+      marginTop: 20,
+      // borderWidth: 1,
+      padding: 10,
+      backgroundColor: '#F2F2F2',
+      color: '#747476'
     }
 });
