@@ -20,7 +20,9 @@ const Home = () => {
           <Text style={{ ...Styles.TextoPadrao, fontSize: 30, fontWeight: 'bold', marginTop: '10%' }}>Geração I</Text>
           <Text style={{ ...Styles.TextoPadrao, marginTop: '5%'}}>Pesquise o Pokémon pelo seu nome...</Text>
           <Input />
-          <ListaPokemon />
+          <View>
+            <ListaPokemon />
+          </View>
         </ScrollView>
       );
 }
