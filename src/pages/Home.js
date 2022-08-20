@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, Text, View, Image, TextInput, FlatList } from 'react-native';
 import { Styles } from "../../Styles";
 import { Link } from '@react-navigation/native';
+import Input from '../components/Input';
 
 const Home = () => {
     return (
@@ -18,9 +19,8 @@ const Home = () => {
           <View style={{ }}>
             <Text style={{ ...Styles.TextoPadrao, fontSize: 30, fontWeight: 'bold', marginTop: '10%' }}>Geração I</Text>
             <Text style={{ ...Styles.TextoPadrao, marginTop: '5%'}}>Pesquise o Pokémon pelo seu nome...</Text>
-            <TextInput style={ Styles.InputHome } placeholder='Qual Pokémon você está procurando?' placeholderTextColor='#747476'></TextInput>
+            <Input />
           </View>
-          <FlatList></FlatList>
         </ScrollView>
       );
 }
