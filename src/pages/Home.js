@@ -1,30 +1,59 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ScrollView, Text, View, Image, TextInput, FlatList } from 'react-native';
 import { Styles } from "../../Styles";
 import { Link } from '@react-navigation/native';
 import Input from '../components/Input';
-import ListaPokemon from '../components/ListaPokemon';
+import axios from 'axios';
 
 const Home = () => {
-    return (
-        <ScrollView style={{ padding: 30, display: 'flex', flexDirection: 'column', backgroundColor: 'white' }}>
-          <View style={ { ...Styles.container, display: 'flex', flexDirection: 'row', height: 36, justifyContent: 'space-between', alignItems: 'center', width: '100%', height: '100%' } }>
-            <View style={{ width: '60%', height: '100%' }}>
-              <Image source={require('../../assets/LogoHome.png')} style={{ height: 36, width: '100%'  }}/>
-            </View>
-            <View style={{ display: 'flex', flexDirection: 'row', width: '40%', justifyContent: 'space-around' }}>
-              <Image source={ require('../../assets/SorterIcon.png') } style={{ width: 30, height: 27 }} />
-              <Image source={ require('../../assets/FilterIcon.png') } style={{ width: 30, height: 27 }} />
-            </View>
-          </View>
-          <Text style={{ ...Styles.TextoPadrao, fontSize: 30, fontWeight: 'bold', marginTop: '10%' }}>Geração I</Text>
-          <Text style={{ ...Styles.TextoPadrao, marginTop: '5%'}}>Pesquise o Pokémon pelo seu nome...</Text>
-          <Input />
-          <View>
-            <ListaPokemon />
-          </View>
-        </ScrollView>
-      );
+  const [ data, setData ] = useState('');
+  
+  const getDados = async () => {
+    try {
+    // const response2 = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+    // const dadoVSF = response2.json()
+    //   .then((json) => {
+    //     // console.log(json.name);
+    //     return json.name;
+    //   });
+    // console.log(dadoVSF);
+     const response = await fetch('https://reactnative.dev/movies.json');
+    //  console.log(response);
+     const json = await response.json();
+    //  console.log(dadoVSF);
+     setData(json.movies);
+   } catch (error) {
+     console.error(error);
+   } finally {
+    //  setData(false);
+   }
+  }
+
+  useEffect(() => {
+    getDados();
+  }, []);
+
+  return (
+    <View style={{ backgroundColor: 'white', minHeight: '100%', padding: '8%' }}>
+      <View style={ { display: 'flex', flexDirection: 'row', alignItems: 'center', width: '100%', /*height: '100%'*/ } }>
+        <View style={{ marginBottom: '2%', width: '60%', height: '100%' }}>
+          <Image source={require('../../assets/LogoHome.png')} style={{ height: 36, width: '100%' }}/>
+        </View>
+        <View style={{ display: 'flex', flexDirection: 'row', width: '40%', justifyContent: 'space-around', height: '100%' }}>
+          <Image source={ require('../../assets/SorterIcon.png') } style={{ width: 30, height: 27 }} />
+          <Image source={ require('../../assets/FilterIcon.png') } style={{ width: 30, height: 27 }} />
+        </View>
+      </View>
+      <Text style={{ ...Styles.TextoPadrao, fontSize: 30, fontWeight: 'bold', marginTop: '5%' }}>Geração I</Text>
+      <Text style={{ ...Styles.TextoPadrao, marginTop: '5%'}}>Pesquise o Pokémon pelo seu nome...</Text>
+      <Input />
+      <FlatList
+      data={data}
+      renderItem={({item}) => <Text style={{ color: 'black' }}>{item.title}</Text>}
+      // keyExtractor={item => item.name}
+      />
+    </View>
+  );
 }
 
 export default Home;

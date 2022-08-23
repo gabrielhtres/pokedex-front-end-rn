@@ -6,7 +6,10 @@ export const Styles = StyleSheet.create({
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
-      color: 'black'
+      color: 'black',
+      borderStyle: 'solid',
+      borderWidth: 1,
+      borderColor: 'red'
     },
     ViewDadosPokedex: {
       display: 'flex',
@@ -34,11 +37,12 @@ export const Styles = StyleSheet.create({
       textAlign: 'center'
     },
     InputHome: {
-      height: '30%',
+      height: '10%',
       marginTop: 20,
-      // borderWidth: 1,
       padding: 10,
+      paddingLeft: 25,
       backgroundColor: '#F2F2F2',
-      color: '#747476'
+      color: '#747476',
+      borderRadius: 10
     }
 });

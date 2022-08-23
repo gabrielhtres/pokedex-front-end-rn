@@ -1,18 +1,36 @@
 import React from "react";
-import { Text, View } from "react-native";
-import axios from "axios";
+import { FlatList, Text, View } from "react-native";
+import { getAllPokemons } from '../../API';
+// import axios from "axios";
 
 async function ListaPokemon() {
-    const dados = await axios({
-        method: "get",
-        url: "https://pokeapi.co/api/v2/pokemon/ditto",
-      });
+    const dadosMock = [{
+        name: 'Bulbassauro'
+    },
+    {
+        name: 'Charmander'
+    }];
+    
+    const dados = getAllPokemons()
+        .then(res => {
+            console.log(res);
+            return res.data;
+        })
       
-      const name = dados.data.name;
-      console.log(name);
+      console.log(dados);
+
+    const renderItem = ({ item }) => (
+        <Text style={{ color: 'black' }}>{item.name}</Text>
+    );
 
     return(
-        <View></View>
+        <View>
+            <FlatList
+            data={dados}
+            renderItem={({item}) => <Text style={{ color: 'black' }}>{item.name}</Text>}
+            // keyExtractor={item => item.name}
+            />
+        </View>
     );
 }
 
