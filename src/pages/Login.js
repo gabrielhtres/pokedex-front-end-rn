@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { ScrollView, Text, View, Image, TextInput, Button, Pressable, KeyboardAvoidingView } from 'react-native';
 import { Styles } from "../../Styles";
 
-function validateLogin() {
-    console.log('Login');
-}
+const Login = ({ navigation }) => {
 
-const Login = () => {
+    function validateLogin() {
+        navigation.navigate('Home');
+    }
+
   return (
     <KeyboardAvoidingView behavior='padding'>
         <View style={{ backgroundColor: 'white', minHeight: '100%',/*minHeight: '100%', */padding: '8%', justifyContent: 'center' }}>
