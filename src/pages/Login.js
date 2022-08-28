@@ -10,6 +10,7 @@ const Login = () => {
   return (
     <KeyboardAvoidingView behavior='padding'>
         <View style={{ backgroundColor: 'white', minHeight: '100%',/*minHeight: '100%', */padding: '8%', justifyContent: 'center' }}>
+            <Image source={require('../../assets/LogoHome.png')} style={{ width: '100%', height: '8%', marginBottom: 40 }}/>
             <Text style={ Styles.TextoPadrao }>Usuário</Text>
             <TextInput style={ Styles.InputLogin }/>
             <Text style={ Styles.TextoPadrao }>Senha</Text>
