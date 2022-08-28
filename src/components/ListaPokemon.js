@@ -11,26 +11,29 @@ async function ListaPokemon() {
         name: 'Charmander'
     }];
     
-    const dados = getAllPokemons()
-        .then(res => {
-            console.log(res);
-            return res.data;
-        })
+    // const dados = getAllPokemons()
+    //     .then(res => {
+    //         console.log(res);
+    //         return res.data;
+    //     })
       
-      console.log(dados);
+    //   console.log(dados);
 
-    const renderItem = ({ item }) => (
-        <Text style={{ color: 'black' }}>{item.name}</Text>
-    );
+    const renderItem = ({item}) => {
+        console.log(item);
+        return(
+            <View style={{ width: '100%', height: '50%', backgroundColor: 'green' }}>
+                <Text style={{ color: 'black' }}>{item.name}</Text>
+            </View>
+        );
+    }
 
     return(
-        <View>
-            <FlatList
-            data={dados}
-            renderItem={({item}) => <Text style={{ color: 'black' }}>{item.name}</Text>}
+        <FlatList
+            data={dadosMock}
+            renderItem={renderItem}
             // keyExtractor={item => item.name}
-            />
-        </View>
+        />
     );
 }
 

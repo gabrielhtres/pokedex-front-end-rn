@@ -4,6 +4,7 @@ import { Styles } from "../../Styles";
 import { Link } from '@react-navigation/native';
 import Input from '../components/Input';
 import axios from 'axios';
+import ListaPokemon from '../components/ListaPokemon';
 
 const Home = () => {
   const [ data, setData ] = useState('');
@@ -33,6 +34,15 @@ const Home = () => {
     getDados();
   }, []);
 
+  const renderItem = ({item}) => {
+    console.log(item);
+    return(
+      <View style={{ width: '100%', height: '50%', backgroundColor: 'green' }}>
+        <Text style={{ color: 'black' }}>{item.title}</Text>
+      </View>
+    );
+  }
+
   return (
     <View style={{ backgroundColor: 'white', minHeight: '100%', padding: '8%' }}>
       <View style={ { display: 'flex', flexDirection: 'row', alignItems: 'center', width: '100%', /*height: '100%'*/ } }>
@@ -47,11 +57,12 @@ const Home = () => {
       <Text style={{ ...Styles.TextoPadrao, fontSize: 30, fontWeight: 'bold', marginTop: '5%' }}>Geração I</Text>
       <Text style={{ ...Styles.TextoPadrao, marginTop: '5%'}}>Pesquise o Pokémon pelo seu nome...</Text>
       <Input />
-      <FlatList
-      data={data}
-      renderItem={({item}) => <Text style={{ color: 'black' }}>{item.title}</Text>}
-      // keyExtractor={item => item.name}
-      />
+      {/* <FlatList
+        data={data}
+        renderItem={renderItem}
+        // keyExtractor={item => item.name}
+      /> */}
+      <ListaPokemon />
     </View>
   );
 }
