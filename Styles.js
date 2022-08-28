@@ -44,5 +44,29 @@ export const Styles = StyleSheet.create({
       backgroundColor: '#F2F2F2',
       color: '#747476',
       borderRadius: 10
+    },
+    InputLogin: {
+      height: '7%',
+      marginTop: 20,
+      padding: 10,
+      paddingLeft: 25,
+      backgroundColor: '#F2F2F2',
+      color: '#747476',
+      borderRadius: 10,
+      marginBottom: 20
+    },
+    BotaoPadrao: {
+      marginTop: 20,
+      borderRadius: 10,
+      backgroundColor: 'red',
+      height: '7%',
+      color: 'white',
+      textAlign: 'center',
+      justifyContent: 'center'
+    },
+    TextoBotao: {
+      color: 'white',
+      textAlign: 'center',
+      justifyContent: 'center'
     }
 });

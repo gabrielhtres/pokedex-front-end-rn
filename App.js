@@ -2,6 +2,7 @@ import React from 'react';
 import { Styles } from './Styles';
 import PokemonProfile from './src/pages/PokemonProfile';
 import Home from './src/pages/Home';
+import Login from './src/pages/Login';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -17,6 +18,11 @@ export default function App() {
           headerShown: false
         }}
       >
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{ title: 'Login' }}
+        />
         <Stack.Screen
           name="Home"
           component={Home}
