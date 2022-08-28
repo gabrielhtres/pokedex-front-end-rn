@@ -46,7 +46,7 @@ export const Styles = StyleSheet.create({
       borderRadius: 10
     },
     InputLogin: {
-      height: '7%',
+      minHeight: '7%',
       marginTop: 20,
       padding: 10,
       paddingLeft: 25,
@@ -59,7 +59,7 @@ export const Styles = StyleSheet.create({
       marginTop: 20,
       borderRadius: 10,
       backgroundColor: 'red',
-      height: '7%',
+      minHeight: '7%',
       color: 'white',
       textAlign: 'center',
       justifyContent: 'center'
