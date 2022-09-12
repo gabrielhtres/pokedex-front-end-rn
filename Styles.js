@@ -68,5 +68,15 @@ export const Styles = StyleSheet.create({
       color: 'white',
       textAlign: 'center',
       justifyContent: 'center'
+    },
+    ListaPokemon : {
+      marginTop: 10,
+      Card: {
+        backgroundColor: 'green',
+        width: '100%',
+        height: '5%',
+        marginBottom: '5%',
+        borderRadius: 15
+      }
     }
 });

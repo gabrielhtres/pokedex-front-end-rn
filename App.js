@@ -36,10 +36,5 @@ export default function App() {
         {/* https://reactnavigation.org/docs/use-navigation - Documentação navigation */}
       </Stack.Navigator>
     </NavigationContainer>
-    // <View style={Styles.container}>
-    //   <Text>Open up App.js to start working on your app!</Text>
-    //   <StatusBar style="auto" />
-    //   <Button title="Botão"/>
-    // </View>
   );
 }

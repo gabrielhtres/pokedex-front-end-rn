@@ -1,39 +1,21 @@
 import React from "react";
 import { FlatList, Text, View } from "react-native";
 import { getAllPokemons } from '../../API';
-// import axios from "axios";
+import { Styles } from "../../Styles";
 
-async function ListaPokemon() {
-    const dadosMock = [{
-        name: 'Bulbassauro'
-    },
-    {
-        name: 'Charmander'
-    }];
-    
-    // const dados = getAllPokemons()
-    //     .then(res => {
-    //         console.log(res);
-    //         return res.data;
-    //     })
-      
-    //   console.log(dados);
-
-    const renderItem = ({item}) => {
-        console.log(item);
-        return(
-            <View style={{ width: '100%', height: '50%', backgroundColor: 'green' }}>
-                <Text style={{ color: 'black' }}>{item.name}</Text>
-            </View>
-        );
-    }
+const ListaPokemon = (props) => {
+    const dadosPokemons = props.data;
+    // console.log(dadosPokemons)
 
     return(
-        <FlatList
-            data={dadosMock}
-            renderItem={renderItem}
-            // keyExtractor={item => item.name}
-        />
+        <View style={ Styles.ListaPokemon }>
+            {dadosPokemons.map(element => (
+                // console.log(element.name)
+                <View style={ Styles.ListaPokemon.Card }>
+                    <Text>{ element.name }</Text>
+                </View>
+            ))}
+        </View>
     );
 }
 
