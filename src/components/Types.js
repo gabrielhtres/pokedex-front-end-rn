@@ -9,7 +9,7 @@ const Types = (props) => {
     return(
         <View style={ Styles.ListaPokemon.Card.InfoCardPokemon.Types }>
             {types.map(type => (
-                <Text>{type.name}</Text>
+                <Text key={type.id}>{type.name}</Text>
             ))}
         </View>
     );

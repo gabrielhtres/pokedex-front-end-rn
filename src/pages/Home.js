@@ -11,7 +11,7 @@ const Home = () => {
   const [ data, setData ] = useState([]);
   // console.log(data);
   const getDados = async () => {
-    const dados = await getAllPokemons('http://15.228.204.97/pokemons');
+    const dados = await getAllPokemons('http://18.229.118.77/pokemons');
     // console.log(dados);
     setData(dados);
   }
@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
 
   return (
-    <ScrollView style={{ backgroundColor: 'white', padding: '8%' }} contentInsetAdjustmentBehavior="automatic">
+    <ScrollView style={{ backgroundColor: 'white', padding: '8%', paddingBottom: 100 }} scrollEnabled={true} >
        <View style={ { display: 'flex', flexDirection: 'row', alignItems: 'center', width: '100%', /*height: '100%'*/ } }>
         <View style={{ marginBottom: '2%', width: '60%', height: '100%' }}>
           <Image source={require('../../assets/LogoHome.png')} style={{ height: 36, width: '100%' }}/>
@@ -33,7 +33,7 @@ const Home = () => {
       </View>
       <Text style={{ ...Styles.TextoPadrao, fontSize: 30, fontWeight: 'bold', marginTop: '5%' }}>Geração I</Text>
       <Text style={{ ...Styles.TextoPadrao, marginTop: '5%'}}>Pesquise o Pokémon pelo seu nome...</Text>
-      <Input />
+      <Input style={{ height: 5 }}/>
       <ListaPokemon data={data} />
     </ScrollView>
   );
