@@ -37,8 +37,9 @@ export const Styles = StyleSheet.create({
       textAlign: 'center'
     },
     InputHome: {
-      height: '10%',
+      height: '5%',
       marginTop: 20,
+      marginBottom: 40,
       padding: 10,
       paddingLeft: 25,
       backgroundColor: '#F2F2F2',
@@ -75,8 +76,29 @@ export const Styles = StyleSheet.create({
         backgroundColor: 'green',
         width: '100%',
         height: '5%',
-        marginBottom: '5%',
-        borderRadius: 15
-      }
+        marginBottom: '12%',
+        borderRadius: 15,
+        display: 'flex',
+        padding: '5%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        InfoCardPokemon: {
+          flexGrow: 3,
+          Types: {
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between'
+          }
+        },
+        ImageCardPokemon: {
+          flexGrow: 1,
+          Image: {
+            width: 170,
+            height: 170,
+            marginTop: '-40%'
+          }
+        }
+      },
+      
     }
 });

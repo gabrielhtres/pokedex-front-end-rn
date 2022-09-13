@@ -18,11 +18,11 @@ export default function App() {
           headerShown: false
         }}
       >
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Login"
           component={Login}
           options={{ title: 'Login' }}
-        />
+        /> */}
         <Stack.Screen
           name="Home"
           component={Home}
